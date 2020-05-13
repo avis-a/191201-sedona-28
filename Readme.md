@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Alina Glebova](https://up.htmlacademy.ru/htmlcss/28/user/191201).
-* Наставник: `Анна Пономарёва`.
+* Наставник: [Анна Пономарёва](https://htmlacademy.ru/profile/id153610).
 
 ---
 
