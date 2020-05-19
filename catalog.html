@@ -7,12 +7,12 @@
 </head>
 
 <body>
-  <header>
+  <header class="main-header">
     <nav>
       <a href="index.html">
-        <img src="img/logo.svg" alt="Логотип сайты" width="138" height="70">
+        <img class="logo" src="img/logo.svg" alt="Логотип сайты" width="138" height="70">
       </a>
-      <ul>
+      <ul class="menu">
         <li><a href="#">Информация</a></li>
         <li><a href="#">Фото и видео</a></li>
         <li><a href="#">Карта штата</a></li>
@@ -23,64 +23,94 @@
 
   <main>
     <h1>Гостиницы Седоны</h1>
-    <section>
+    <section class="filter">
       <h2>Фильтр поиска жилья</h2>
       <!-- Здесь будет форма фильтра -->
     </section>
 
-    <section>
+    <section class="search-results">
       <h2>Сортировка результатов поиска</h2>
       <!-- Здесь будет форма фильтра -->
     </section>
 
-    <section>
+    <section class="results">
       <h2>Результаты поиска</h2>
-      <ul>
-        <li>
+      <ul class="catalog-list">
+        <li class="catalog-item">
           <img src="img/amara.jpg" alt="Гостиница Amara Resort & Spa" width="135" height="90">
-          <h3>Amara Resort &amp; Spa</h3>
-          <p>Гостиница</p>
-          <p> от 4000 р.</p>
-          <a href="#">Подробнее</a>
-          <a href="#">Забронировать</a>
-          <img src="img/star.svg" alt="Классификация гостиницы">
-          <img src="img/star.svg" alt="Классификация гостиницы">
-          <img src="img/star.svg" alt="Классификация гостиницы">
-          <img src="img/star.svg" alt="Классификация гостиницы">
-          <p>Рейтинг: 8,5</p>
+          <div class="catalog-item-details">
+            <h3>Amara Resort &amp; Spa</h3>
+            <div class="details">
+              <p>Гостиница</p>
+              <a href="#">Подробнее</a>
+            </div>
+            <div class="book">
+              <p> от 4000 р.</p>
+              <a href="#">Забронировать</a>
+            </div>
+          </div>
+          <div>
+            <ul class="star">
+              <li><img src="img/star.svg" alt="Четырёхзвёздочная гостиница"></li>
+              <li><img src="img/star.svg" alt=""></li>
+              <li><img src="img/star.svg" alt=""></li>
+              <li><img src="img/star.svg" alt=""></li>
+            </ul>
+            <p class="rating">Рейтинг: 8,5</p>
+          </div>
         </li>
 
-        <li>
+        <li class="catalog-item">
           <img src="img/desert.jpg" alt="Гостиница Desert Quail Inn" width="135" height="90">
-          <h3>Desert Quail Inn</h3>
-          <p>Мотель</p>
-          <p> от 3000 р.</p>
-          <a href="#">Подробнее</a>
-          <a href="#">Забронировать</a>
-          <img src="img/star.svg" alt="Классификация мотеля">
-          <img src="img/star.svg" alt="Классификация мотеля">
-          <img src="img/star.svg" alt="Классификация мотеля">
-          <p>Рейтинг: 8,9</p>
+          <div class="catalog-item-details">
+            <h3>Desert Quail Inn</h3>
+            <div class="details">
+              <p>Мотель</p>
+              <a href="#">Подробнее</a>
+            </div>
+            <div class="book">
+              <p> от 3000 р.</p>
+              <a href="#">Забронировать</a>
+            </div>
+          </div>
+          <div>
+            <ul class="star">
+              <li><img src="img/star.svg" alt="Трёхзвёздочный мотель"></li>
+              <li><img src="img/star.svg" alt=""></li>
+              <li><img src="img/star.svg" alt=""></li>
+            </ul>
+            <p class="rating">Рейтинг: 8,9</p>
+          </div>
         </li>
 
-        <li>
+        <li class="catalog-item">
           <img src="img/villas.jpg" alt="Гостиница Villas at Poco Diablo" width="135" height="90">
-          <h3>Villas at Poco Diablo</h3>
-          <p>Апартаменты</p>
-          <p> от 2000 р.</p>
-          <a href="#">Подробнее</a>
-          <a href="#">Забронировать</a>
-          <img src="img/star.svg" alt="Классификация апартаментов">
-          <img src="img/star.svg" alt="Классификация апартаментов">
-          <p>Рейтинг: 9,2</p>
+          <div class="catalog-item-details">
+            <h3>Villas at Poco Diablo</h3>
+            <div class="details">
+              <p>Апартаменты</p>
+              <a href="#">Подробнее</a>
+            </div>
+            <div class="book">
+              <p> от 2000 р.</p>
+              <a href="#">Забронировать</a>
+            </div>
+          </div>
+          <div>
+            <ul class="star">
+              <li><img src="img/star.svg" alt="Двухзвёздочные апартаменты"></li>
+              <li><img src="img/star.svg" alt=""></li>
+            </ul>
+            <p class="rating">Рейтинг: 9,2</p>
+          </div>
         </li>
       </ul>
     </section>
 
-    <footer>
+    <footer class="main-footer">
       <p>#visitsedona</p>
-      <a href="tel:+7(495) 666-01-66"> ТЕЛ: +7(495) 666-01-66</a>
-      <ul>
+      <a href="tel:+74956660166"> ТЕЛ: +7(495) 666-01-66</a>
+      <ul class="socials">
         <li><a href="#">Twitter</a></li>
         <li><a href="#">Facebook</a></li>
         <li><a href="#">Youtube</a></li>
