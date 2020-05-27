@@ -22,7 +22,7 @@
   </header>
 
   <main>
-    <section class="main-text">
+    <section class="visually-hidden">
       <h1>Седона &ndash; город в штате Аризона</h1>
       <img src="img/welcome.svg" alt="Заглавный текст страницы">
     </section>
@@ -98,21 +98,27 @@
     </section>
 
     <section class="search">
-      <form>
+      <form action="https://echo.htmlacademy.ru/" method="POST">
         <h2>Поиск гостиницы в Седоне</h2>
         <p>
-          <label>Дата заезда:</label>
-          <input type="text" value="24 апреля 2017">
+          <label for="arrival-date">Дата заезда:</label>
+          <input id="arrival-date" type="text" name="arrival-date" placeholder="24 апреля 2017">
+          <a href="#">Календарь</a>
         </p>
         <p>
-          <label>Дата выезда:</label>
-          <input type="text" value="4 июля 2017">
+          <label for="departure-date">Дата выезда:</label>
+          <input id="departure-date" type="text" name="departure-date" placeholder="4 июля 2017">
+          <a href="#">Календарь</a>
         </p>
         <p>
-          <label>Взрослые:</label>
-          <input type="text" value="2">
-          <label>Дети:</label>
-          <input type="text" value="0">
+          <label for="adult">Взрослые:</label>
+          <input id="adult" type="text" name="adult" placeholder="2">
+          <button type="button">+</button>
+          <button type="button">-</button>
+          <label for="children">Дети:</label>
+          <input id="children" type="text" name="children" placeholder="0">
+          <button type="button">+</button>
+          <button type="button">-</button>
         </p>
         <p>
           <button type="submit">Найти</button>

@@ -22,15 +22,67 @@
   </header>
 
   <main>
-    <h1>Гостиницы Седоны</h1>
-    <section class="filter">
-      <h2>Фильтр поиска жилья</h2>
-      <!-- Здесь будет форма фильтра -->
-    </section>
+    <section>
+      <h1 class="visually-hidden">Гостиницы Седоны</h1>
+      <form action="https://echo.htmlacademy.ru/" method="POST">
+        <fieldset>
+          <legend>Инфраструктура:</legend>
+          <ul>
+            <li>
+              <input type="checkbox" name="pool" id="filter-pool" checked>
+              <label for="filter-pool">Бассейн</label>
+            </li>
+            <li>
+              <input type="checkbox" name="parking" id="filter-parking">
+              <label for="filter-parking">Парковка</label>
+            </li>
+            <li>
+              <input type="checkbox" name="wi-fi" id="filter-wi-fi">
+              <label for="filter-wi-fi">Wi-fi</label>
+            </li>
+          </ul>
+        </fieldset>
 
-    <section class="search-results">
-      <h2>Сортировка результатов поиска</h2>
-      <!-- Здесь будет форма фильтра -->
+        <fieldset>
+          <legend>Тип жилья:</legend>
+          <ul>
+            <li>
+              <input type="checkbox" name="hotel" id="search-result-hotel" checked>
+              <label for="search-result-hotel">Гостиница</label>
+            </li>
+            <li>
+              <input type="checkbox" name="motel" id="search-result-motel" checked>
+              <label for="search-result-motel">Мотель</label>
+            </li>
+            <li>
+              <input type="checkbox" name="apartament" id="search-result-apartament" checked>
+              <label for="search-result-apartament">Апартаменты</label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <div class="price-filter">
+          <p>Стоимость в сутки(р):</p>
+          <input type="text" placeholder="От 0">
+          <input type="text" placeholder="До 3000">
+          <input type="range">
+          <button type="submit">Показать</button>
+        </div>
+      </form>
+
+      <div>
+        <span>Найдено: 3</span>
+        <label>Сортировка:</label>
+        <div>
+          <a href="#">По цене</a>
+          <a href="#">По типу</a>
+          <a href="#">По рейтингу</a>
+        </div>
+        <div>
+          <a href="#">По убыванию</a>
+          <a href="#">По возрастанию</a>
+        </div>
+      </div>
     </section>
 
     <section class="results">
