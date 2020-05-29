@@ -9,7 +9,7 @@
 <body>
   <header class="main-header">
     <nav>
-      <a href="index.html">
+      <a>
         <img class="logo" src="img/logo.svg" alt="Логотип сайты" width="138" height="70">
       </a>
       <ul class="menu">
@@ -22,8 +22,8 @@
   </header>
 
   <main>
-    <section class="visually-hidden">
-      <h1>Седона &ndash; город в штате Аризона</h1>
+    <section>
+      <h1 class="visually-hidden">Седона &ndash; город в штате Аризона</h1>
       <img src="img/welcome.svg" alt="Заглавный текст страницы">
     </section>
 
@@ -33,39 +33,39 @@
     </section>
 
     <section class="benefits">
-      <div class="benefit-blue">
-        <div class="benefit-item">
+      <div class="benefit-wrapper">
+        <div class="benefit-item discription">
           <h2>Настоящий городок</h2>
           <p>&mdash; &#8470;1 &mdash;</p>
           <p>Седона &ndash; не аттракцион для туристов, там течёт своя жизнь</p>
         </div>
         <img class="benefit-img" src="img/main-image-1.jpg" alt="Фото настоящего городка" width="800" height="256">
       </div>
-      <div class="benefit-white">
-        <ul class="list">
-          <li class="item">
+      <div class="benefit-subitems">
+        <ul class="benefit-subitems-list">
+          <li class="benefit-subitems-item house">
             <b>Жильё</b>
             <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
           </li>
-          <li class="item">
+          <li class="benefit-subitems-item food">
             <b>Еда</b>
             <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
           </li>
-          <li class="item">
+          <li class="benefit-subitems-item souvenirs">
             <b>Сувениры</b>
             <p>Не только китайского, но и местного производства!</p>
           </li>
         </ul>
       </div>
-      <div class="benefit-blue">
+      <div class="benefit-wrapper">
         <img class="benefit-img" src="img/maim-image-2.jpg" alt="Фото моста дьявола" width="800" height="256">
-        <div class="benefit-item">
+        <div class="benefit-item discription">
           <h2>Там есть мост дьявола</h2>
           <p>&mdash; &#8470;2 &mdash;</p>
           <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
         </div>
       </div>
-      <div class="benefit-grey">
+      <div class="benefit-wrapper">
         <div class="benefit-item">
           <h2>Небольшая площадь</h2>
           <p>&mdash; &#8470;3 &mdash;</p>
@@ -112,13 +112,13 @@
         </p>
         <p>
           <label for="adult">Взрослые:</label>
+          <button type="button" class="button-counter">-</button>
           <input id="adult" type="text" name="adult" placeholder="2">
-          <button type="button">+</button>
-          <button type="button">-</button>
+          <button type="button" class="button-counter">+</button>
           <label for="children">Дети:</label>
+          <button type="button" class="button-counter">-</button>
           <input id="children" type="text" name="children" placeholder="0">
-          <button type="button">+</button>
-          <button type="button">-</button>
+          <button type="button" class="button-counter">+</button>
         </p>
         <p>
           <button type="submit">Найти</button>
@@ -131,9 +131,9 @@
     <p>#visitsedona</p>
     <a href="tel:+74956660166"> ТЕЛ: +7(495) 666-01-66</a>
     <ul class="socials">
-      <li><a href="#">Twitter</a></li>
-      <li><a href="#">Facebook</a></li>
-      <li><a href="#">Youtube</a></li>
+      <li><a href="#" aria-label="Twitter"></a></li>
+      <li><a href="#" aria-label="Facebook"></a></li>
+      <li><a href="#" aria-label="Youtube"></a></li>
     </ul>
     <p>Website by:
       <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
