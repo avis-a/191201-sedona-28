@@ -4,6 +4,9 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -22,11 +25,10 @@
   </header>
 
   <main>
-    <section>
+    <section class="main">
       <h1 class="visually-hidden">Седона &ndash; город в штате Аризона</h1>
       <img src="img/welcome.svg" alt="Заглавный текст страницы">
     </section>
-
     <section class="about">
       <b>Седона &mdash; небольшой городок в Аризоне, заслуживающий большего!</b>
       <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
@@ -121,21 +123,23 @@
           <button type="button" class="button-counter">+</button>
         </p>
         <p>
-          <button type="submit">Найти</button>
+          <button class="search-button" type="submit">Найти</button>
         </p>
       </form>
     </section>
   </main>
 
   <footer class="main-footer">
-    <p>#visitsedona</p>
-    <a href="tel:+74956660166"> ТЕЛ: +7(495) 666-01-66</a>
+    <div class="tel">
+      <p>#visitsedona</p>
+      <a href="tel:+74956660166"> ТЕЛ: +7(495) 666-01-66</a>
+    </div>
     <ul class="socials">
       <li><a href="#" aria-label="Twitter"></a></li>
       <li><a href="#" aria-label="Facebook"></a></li>
       <li><a href="#" aria-label="Youtube"></a></li>
     </ul>
-    <p>Website by:
+    <p class="copyright">Website by:
       <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
     </p>
   </footer>

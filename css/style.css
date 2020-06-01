@@ -1,0 +1,340 @@
+:root {
+    --basic-white: #ffffff;
+    --basic-black: #000000;
+    --basic-extra-light: #EEEEEE;
+    --basic-blue: #81B3D2;
+    --basic-brown: #766357;
+    --basic-light: #F2F2F2;
+    --basic-grey: #EBEBEB;
+    --basic-dark-grey: #A9A9A9;
+    --basic-light-beige: #E5E5E5;
+    --basic-middle-blue: #669EC0;
+    --basic-dark-blue: #5496BD;
+    --basic-middle-brown: #604E43;
+    --basic-dark-brown: #503E33;
+    --basic-neutral: #666666;
+  }
+
+  body {
+    min-width: 1200px;
+    margin: 0;
+    padding: 0;
+    font-family: "PT Sans", Arial, sans-serif;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--basic-black);
+    text-transform: uppercase;
+    background-color: var(--basic-white);
+  }
+
+a {
+  text-decoration: none;
+  color: var(--basic-black);
+} 
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Main header */
+
+.main-header {
+    font-size: 14px;
+    line-height: 26px;
+    color: var(--basic-black);
+    background-color: transparent;
+}
+
+.main {
+    background-image: url("../img/background-photo.jpg");
+    background-repeat: no-repeat;
+}
+
+.menu {
+    list-style: none;
+    background-color: var(--basic-white);
+}
+
+.menu a:hover {
+    color: var(--basic-blue);
+}
+
+.menu a:focus {
+    color: var(--basic-black);
+    opacity: 0.3;
+}
+
+.menu a:active {
+    color: var(--basic-brown);
+}
+
+/* Main */
+
+.about {
+    text-align: center;
+}
+
+.about b {
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 26px;
+}
+
+.about p {
+    line-height: 26px;
+}
+
+.discription {
+    background-color: var(--basic-blue);
+    color: var(--basic-white);
+}
+
+.discription h1 {
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.benefit-subitems-item {
+    list-style: none;
+}
+
+.benefit-subitems-item b {
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.benefit-wrapper:last-child {
+    background-color: var(--basic-extra-light);
+}
+
+.benefit-item h2 {
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.map {
+    line-height: 24px;
+    text-align: center;
+}
+
+.map-label b {
+    font-size: 30px;
+    font-weight: bold;
+}
+.search h2 {
+    color: var(--basic-white);
+    background-color: var(--basic-brown);
+    text-align: center;
+}
+
+.search h2:hover {
+    background-color: var(--basic-middle-brown);
+}
+
+.search h2:focus {
+    background-color: var(--basic-dark-brown);
+    opacity: 0.3;
+}
+
+.button-counter {
+    color: var(--basic-dark-grey);
+    background-color: var(--basic-white);
+    vertical-align: middle;
+    border: none; 
+}
+
+.button-counter:hover {
+    color: var(--basic-black);
+}
+
+.button-counter:focus {
+    color: var(--basic-blue);
+}
+
+.search input {
+    font: inherit;
+    background-color: var(--basic-light);
+    border: none;
+}
+
+.search input:hover {
+    background-color: var(--basic-grey);
+}
+
+.search input:focus {
+    background-color: var(--basic-white);
+    border: 2px solid var(--basic-light-beige);
+}
+
+.search-button {
+    font: inherit;
+    text-align: center;
+    color: var(--basic-white);
+    vertical-align: middle;
+    text-transform: uppercase;
+    background-color: var(--basic-blue);
+    border: none;  
+}
+
+.search-button:hover {
+    background-color: var(--basic-middle-blue);
+}
+
+.search-button:focus {
+    background-color: var(--basic-dark-blue);
+    opacity: 0.3;
+}
+
+/* Main footer */
+
+.tel {
+    line-height: 26px;
+    font-weight: bold;
+}
+
+.socials {
+    list-style: none;
+    background-color: var(--basic-blue);
+}
+
+.socials:hover {
+    background-color: var(--basic-middle-blue);
+}
+
+.socials:focus {
+    background-color: var(--basic-dark-blue);
+    opacity: 0.3;
+}
+
+/* Catalog */
+/* Main-filter */
+
+.main-filter {
+    background-image: url("../img/background-catalog.jpg");
+    background-repeat: no-repeat;
+    color: var(--basic-white);
+    width: 100%;
+}
+
+.main-filter fieldset {
+    border: none;
+    
+}
+
+.main-filter li {
+    list-style: none;
+}
+
+.main-filter li {
+    border: 2px solid var(--basic-white);
+    background-color: transparent;
+}
+
+.main-filter input {
+    text-align: center;
+    border: 2px solid var(--basic-white);
+    background-color: transparent;
+}
+
+.main-filter input::placeholder {
+    color: var(--basic-white);
+    text-transform: uppercase;
+}
+
+.price-filter button {
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--basic-dark-grey);
+    background-color: transparent;
+    vertical-align: middle;
+    border: 2px solid var(--basic-white);
+    text-transform: uppercase;
+}
+
+.price-filter button:hover {
+    color: var(--basic-black);
+    background-color: var(--basic-white);
+}
+
+.sort-results {
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.sort-results span {
+    line-height: 26px;
+    font-weight: bold;
+}
+
+.sort-results a:first-child {
+    color: var(--basic-blue);
+}
+
+.sort-results a:nth-child(2),
+.sort-results a:last-child {
+    color: var(--basic-black);
+    opacity: 0.3;
+    border-bottom: 1px dashed var(--basic-blue);
+}
+
+.sort-results a:nth-child(2):hover,
+.sort-results a:last-child:hover {
+    color: var(--basic-blue);
+}
+
+.sort-results a:nth-child(2):focus,
+.sort-results a:last-child:focus {
+    color: var(--basic-black);
+    border: none;
+}
+
+.results li {
+    list-style: none;
+}
+
+.catalog-item h3 {
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 26px;
+}
+
+.details a {
+    text-align: center;
+    color: var(--basic-white);
+    vertical-align: middle;
+    background-color: var(--basic-blue);
+}
+
+.details a:hover {
+    background-color: var(--basic-middle-blue);
+}
+
+.details a:focus {
+    background-color: var(--basic-dark-blue);
+    opacity: 0.3;
+}
+
+.book a {
+    text-align: center;
+    color: var(--basic-white);
+    vertical-align: middle;
+    background-color: var(--basic-brown);
+}
+
+.book a:hover {
+    background-color: var(--basic-middle-brown);
+}
+
+.book a:focus {
+    background-color: var(--basic-dark-brown);
+    opacity: 0.3;
+}
+
+.rating {
+    text-align: center;
+    color: var(--basic-neutral);
+    vertical-align: middle;
+    background-color: var(--basic-light);
+}
