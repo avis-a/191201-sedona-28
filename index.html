@@ -126,41 +126,40 @@
         <b>Заинтересовались?</b>
         <p>Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
       </div>
+      <div class="search">
+        <form class="search-form" action="https://echo.htmlacademy.ru/" method="POST">
+          <h2><a href="#">Поиск гостиницы в Седоне</a></h2>
+          <p>
+            <label for="arrival-date">Дата заезда:</label>
+            <input id="arrival-date" type="text" name="arrival-date" placeholder="24 апреля 2017">
+            <a class="calendar" href="#" aria-label="Календарь"></a>
+          </p>
+          <p>
+            <label for="departure-date">Дата выезда:</label>
+            <input id="departure-date" type="text" name="departure-date" placeholder="4 июля 2017">
+            <a class="calendar" href="#" aria-label="Календарь"></a>
+          </p>
+          <p>
+            <label for="adult">Взрослые:</label>
+            <button type="button" class="button-counter">-</button>
+            <input id="adult" type="text" name="adult" placeholder="2">
+            <button type="button" class="button-counter">+</button>
+  
+            <label for="children">Дети:</label>
+            <button type="button" class="button-counter">-</button>
+            <input id="children" type="text" name="children" placeholder="0">
+            <button type="button" class="button-counter">+</button>
+          </p>
+          <p>
+            <button class="search-button" type="submit">Найти</button>
+          </p>
+        </form>
+      </div>
       <div class="map-frame">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d872887.9619566475!2d-112.54534028950484!3d35.077800236295246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1589838951437!5m2!1sru!2sru"
           width="1199" height="594" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
       </div>
-    </section>
-
-    <section class="search">
-      <form class="search-form" action="https://echo.htmlacademy.ru/" method="POST">
-        <h2><a href="#">Поиск гостиницы в Седоне</a></h2>
-        <p>
-          <label for="arrival-date">Дата заезда:</label>
-          <input id="arrival-date" type="text" name="arrival-date" placeholder="24 апреля 2017">
-          <a class="calendar" href="#" aria-label="Календарь"></a>
-        </p>
-        <p>
-          <label for="departure-date">Дата выезда:</label>
-          <input id="departure-date" type="text" name="departure-date" placeholder="4 июля 2017">
-          <a class="calendar" href="#" aria-label="Календарь"></a>
-        </p>
-        <p>
-          <label for="adult">Взрослые:</label>
-          <button type="button" class="button-counter">-</button>
-          <input id="adult" type="text" name="adult" placeholder="2">
-          <button type="button" class="button-counter">+</button>
-
-          <label for="children">Дети:</label>
-          <button type="button" class="button-counter">-</button>
-          <input id="children" type="text" name="children" placeholder="0">
-          <button type="button" class="button-counter">+</button>
-        </p>
-        <p>
-          <button class="search-button" type="submit">Найти</button>
-        </p>
-      </form>
     </section>
   </main>
 

@@ -231,6 +231,7 @@ main {
     line-height: 24px;
     text-align: center;
     position: relative;
+    /* z-index: 1; */
 }
 
 .map-label {
@@ -256,15 +257,14 @@ main {
     justify-content: flex-start;
     width: 100%;
     position: absolute;
+    bottom: 199px;
 }
 
 .search-form {
     width: 568px;
     height: 481px;
-    /* position: absolute; */
+    margin: 0 auto;
     z-index: 1;
-    /* bottom: 200px; */
-    /* left: 25%; */
     background-color: var(--basic-white);
     box-shadow:  0px 7px 15px rgba(0, 1, 1, 0.15);
 }
@@ -329,12 +329,12 @@ input[type="search"]::placeholder {
 .calendar {
     background-image: url("../img/calendar.svg");
     background-repeat: no-repeat;
-    position: absolute;
-    z-index: 1;
+    position: relative;
+    /* z-index: 1;
     width: 21px;
     height: 23px;
     right: 64px;
-    top: 148px;
+    top: 148px; */
 }
 
 .button-counter {
@@ -412,7 +412,7 @@ input[type="search"]::placeholder {
     grid-template-columns: 1fr 1fr 1fr;
     height: 120px;
     position: relative;
-    z-index: 1;
+    z-index: 3;
     background-color: var(--basic-white);
     opacity: 0.9;
 }
@@ -541,6 +541,18 @@ input[type="search"]::placeholder {
     text-transform: uppercase;
 }
 
+.main-filter .price-filter {
+    align-items: flex-end;
+}
+
+.price-filter {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+    margin-right: 73px;
+}
+
 .price-filter button {
     font-size: 14px;
     line-height: 21px;
@@ -614,7 +626,7 @@ input[type="search"]::placeholder {
 .catalog-item {
     display: flex;
     flex-direction: row;
-
+    justify-content: flex-start;
     width: 1042px;
 
     border: 3px solid yellowgreen;
@@ -701,7 +713,21 @@ input[type="search"]::placeholder {
     opacity: 0.3;
 }
 
+.rating-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-left: 522px;
+}
+
+.star {
+    display: flex;
+    flex-direction: row;
+    margin-top: 29px;
+}
+
 .rating {
+    margin-top: 50px;
     text-align: center;
     color: var(--basic-neutral);
     vertical-align: middle;
