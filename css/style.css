@@ -781,6 +781,10 @@ img {
   border-radius: 2px; */
 }
 
+.filter-input-checkbox:checked + label::before {
+  background-image: none;
+}
+
 .filter-input-checkbox:checked + label::after {
   content: "";
   position: absolute;
