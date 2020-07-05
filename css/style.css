@@ -14,6 +14,7 @@
   --basic-middle-brown: #604E43;
   --basic-dark-brown: #503E33;
   --basic-neutral: #666666;
+  --range-toggle: #ABABAB;
   --focus-logo-academy: #BDBBBC;
   --opacity-black: rgba(0, 0, 0, 0.3);
   --opacity-white: rgba(255, 255, 255, 0.3);
@@ -23,7 +24,7 @@ body {
   min-width: 1200px;
   margin: 0;
   padding: 0;
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-style: normal;
   font-size: 14px;
   line-height: 21px;
@@ -383,23 +384,44 @@ img {
   flex-direction: column;
   justify-content: flex-start;
   width: 568px;
-  position: absolute;
-  bottom: 198px;
-  left: 316px;
+  /* position: absolute;
+  bottom: 197px;
+  left: 316px; */
 }
 
 .search-form {
   width: 568px;
   min-height: 395px;
   padding: 55px;
-  z-index: 1;
+  z-index: -1;
+  position: absolute;
+  bottom: 197px;
+  left: 316px;
   background-color: var(--basic-white);
   box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+}
+
+.modal-show {
+  display: block;
+  z-index: 1;
+  animation: bounce 0.6s;
+}
+
+.modal-hide {
+  display: block;
+  z-index: -1;
+}
+
+.modal-error {
+  animation: shake 0.6s;
 }
 
 .show-modal-button {
   width: 568px;
   min-height: 86px;
+  position: absolute;
+  bottom: 594px;
+  left: 316px;
   text-align: center;
   font-size: 21px;
   line-height: 26px;
@@ -478,13 +500,15 @@ img {
 
 .count>label:nth-of-type(2) {
   padding-left: 51px;
+  padding-right: 28px;
 }
 
 .calendar {
-  border: none;
-  outline: none;
   width: 39px;
   height: 38px;
+  background-color: var(--basic-light);
+  border: none;
+  outline: none;
 }
 
 .calendar:hover path {
@@ -501,6 +525,8 @@ img {
   vertical-align: middle;
   border: none;
   outline: none;
+  width: 38px;
+  height: 38px;
 }
 
 .button-counter:hover path {
@@ -512,7 +538,7 @@ img {
 }
 
 .button-counter+input {
-  width: 80px;
+  width: 38px;
   height: 38px;
 }
 
@@ -735,26 +761,98 @@ img {
   text-transform: uppercase;
 }
 
+.checkbox-area label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+  padding-left: 39px;
+}
+
+.filter-input-checkbox + label::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background-image: url("../img/checkbox-off.svg");
+  width: 23px;
+  height: 23px;
+  /* border: 2px solid var(--basic-white);
+  border-radius: 2px; */
+}
+
+.filter-input-checkbox:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background-image: url("../img/checkbox-on.svg");
+  width: 27px;
+  height: 23px;
+}
+
 .price-filter {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  padding-left: 10px;
   padding-left: 200px;
 }
 
 .price-filter legend {
   width: 100%;
-  margin-bottom: 0px;
+  margin-bottom: 10px;
 }
 
-.price-filter input {
+.price-controls input {
+  width: 154px;
+  min-height: 34px;
   outline: none;
-  border: none;
   border: 2px solid var(--basic-white);
   border-radius: 2px;
-  height: 34px;
+}
+
+.range-controls {
+  position: relative;
+  margin-bottom: 33px;
+  padding-top: 20px;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: var(--opacity-white);
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+  background: var(--basic-white);
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 11px;
+  left: 0px;
+  width: 4px;
+  height: 4px;
+  padding: 0px;
+  border: 8px solid var(--basic-white);
+  background-color: var(--range-toggle);
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 var(--range-toggle);
+  cursor: pointer;
+  box-sizing: content-box;
+  outline: none;
+}
+
+.range-controls .toggle:hover {
+  width: 4px;
+  height: 4px;
+  border: 9px solid var(--basic-white);
+}
+
+.range-controls .toggle-max {
+  left: 238px;
 }
 
 .price-filter input:nth-child(4) {
@@ -764,6 +862,7 @@ img {
 .price-filter button {
   width: 137px;
   height: 34px;
+  margin: 0 auto;
   font-size: 14px;
   line-height: 21px;
   text-align: center;
@@ -772,6 +871,7 @@ img {
   vertical-align: middle;
   border: 2px solid var(--basic-white);
   text-transform: uppercase;
+  outline: none;
 }
 
 .price-filter button:hover {
@@ -827,7 +927,7 @@ img {
   outline: none;
 }
 
-.direction > .desc {
+.direction>.desc {
   position: absolute;
   top: 45px;
   right: 73px;
@@ -839,7 +939,7 @@ img {
   fill: var(--basic-blue);
 }
 
-.direction > .asc  {
+.direction>.asc {
   position: absolute;
   top: 45px;
   right: 96px;
@@ -988,6 +1088,7 @@ img {
   height: 17px;
   top: 29px;
   right: 0px;
+  margin-right: 5px;
   background-image: url("../img/star.svg");
 }
 
@@ -1014,4 +1115,46 @@ img {
   padding-right: 55px;
   background-color: var(--basic-white);
   position: relative;
+}
+
+/* Animations */
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }

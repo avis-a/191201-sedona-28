@@ -29,37 +29,37 @@
       <section class="main-filter">
         <h1 class="visually-hidden">Гостиницы Седоны</h1>
         <form class="main-filter-form" action="https://echo.htmlacademy.ru/" method="POST">
-          <fieldset>
+          <fieldset class="checkbox-area">
             <legend>Инфраструктура:</legend>
             <ul>
               <li>
-                <input type="checkbox" name="pool" id="filter-pool" checked>
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="pool" id="filter-pool" checked>
                 <label for="filter-pool">Бассейн</label>
               </li>
               <li>
-                <input type="checkbox" name="parking" id="filter-parking">
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="parking" id="filter-parking">
                 <label for="filter-parking">Парковка</label>
               </li>
               <li>
-                <input type="checkbox" name="wi-fi" id="filter-wi-fi">
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="wi-fi" id="filter-wi-fi">
                 <label for="filter-wi-fi">Wi-fi</label>
               </li>
             </ul>
           </fieldset>
 
-          <fieldset>
+          <fieldset class="checkbox-area">
             <legend>Тип жилья:</legend>
             <ul>
               <li>
-                <input type="checkbox" name="hotel" id="search-result-hotel" checked>
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="hotel" id="search-result-hotel" checked>
                 <label for="search-result-hotel">Гостиница</label>
               </li>
               <li>
-                <input type="checkbox" name="motel" id="search-result-motel" checked>
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="motel" id="search-result-motel" checked>
                 <label for="search-result-motel">Мотель</label>
               </li>
               <li>
-                <input type="checkbox" name="apartament" id="search-result-apartament" checked>
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="apartament" id="search-result-apartament" checked>
                 <label for="search-result-apartament">Апартаменты</label>
               </li>
             </ul>
@@ -80,8 +80,8 @@
                 <div class="scale">
                   <div class="bar"></div>
                 </div>
-                <div class="toggle toggle-min"></div>
-                <div class="toggle toggle-max"></div>
+                <div class="toggle toggle-min" tabindex="0"></div>
+                <div class="toggle toggle-max" tabindex="0"></div>
               </div>
             </div>
             <button type="submit">Показать</button>
