@@ -217,6 +217,10 @@ img {
   color: var(--basic-white);
 }
 
+.discription:nth-child(2) {
+  padding-top: 50px;
+}
+
 .discription h2 {
   font-size: 21px;
   font-weight: bold;
@@ -341,6 +345,10 @@ img {
 .item-list .benefit-item {
   width: 400px;
   height: 100%;
+}
+
+.benefit-item:nth-child(3) p:nth-child(3) {
+  padding-left: 71px;
 }
 
 .benefit-item {
@@ -902,10 +910,10 @@ img {
   width: 100%;
 }
 
-.price-filter button {
+.price-filter .button-show {
   width: 137px;
   height: 36px;
-  margin: 0 auto;
+  margin-left: 85px;
   font-size: 14px;
   line-height: 21px;
   text-align: center;
@@ -928,9 +936,9 @@ img {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: center;
-  min-height: 93px;
+  min-height: 86px;
   margin-left: 73px;
+  padding-top: 30px;
   font-size: 12px;
   line-height: 18px;
   position: relative;
@@ -941,7 +949,6 @@ img {
   line-height: 26px;
   font-weight: bold;
   padding-right: 46px;
-  padding-top: 16px;
   padding-bottom: 26px;
 }
 
@@ -1048,6 +1055,7 @@ img {
   font-size: 21px;
   line-height: 26px;
   margin-bottom: 0px;
+  margin-top: 25px;
 }
 
 .catalog-item li {
@@ -1062,6 +1070,8 @@ img {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
   min-width: 260px;
   margin-left: 29px;
 }
@@ -1077,8 +1087,7 @@ img {
 
 .catalog-item-details p {
   color: var(--basic-dark);
-  margin-top: -17px;
-  padding-bottom: 0px;
+  margin-top: 7px;
 }
 
 .catalog-item-details a {
@@ -1164,7 +1173,7 @@ img {
 .footer-catalog {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  height: 120px;
+  min-height: 120px;
   padding-left: 55px;
   padding-right: 55px;
   background-color: var(--basic-white);
