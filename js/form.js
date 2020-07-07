@@ -5,6 +5,8 @@ var departureDate = document.querySelector('#departure-date');
 var adult = document.querySelector('#adult');
 var children = document.querySelector('#children');
 
+searchForm.classList.add('modal-hide');
+
 searchButton.addEventListener("click", function (evt) {
   evt.preventDefault();
   if (searchForm.classList.contains('modal-show')) {

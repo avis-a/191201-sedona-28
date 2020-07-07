@@ -313,6 +313,8 @@ img {
   flex-direction: row;
   justify-content: flex-start;
   min-height: 256px;
+  position: relative;
+  z-index: 2;
 }
 
 .item-list {
@@ -334,7 +336,6 @@ img {
 .item-list p:nth-child(3) {
   padding-left: 67px;
   padding-right: 72px;
-  /* нужно ли задавать каждому абзацу свои отступы??? */
 }
 
 .item-list .benefit-item {
@@ -360,6 +361,9 @@ img {
 .map-label {
   height: 233px;
   padding-top: 58px;
+  position: relative;
+  z-index: 2;
+  background-color: var(--basic-white);
 }
 
 .map-label b {
@@ -369,6 +373,7 @@ img {
 
 .map-label p {
   margin-top: 25px;
+  color: var(--basic-dark);
 }
 
 .map-frame {
@@ -384,16 +389,13 @@ img {
   flex-direction: column;
   justify-content: flex-start;
   width: 568px;
-  /* position: absolute;
-  bottom: 197px;
-  left: 316px; */
 }
 
 .search-form {
   width: 568px;
   min-height: 395px;
   padding: 55px;
-  z-index: -1;
+  z-index: 1;
   position: absolute;
   bottom: 197px;
   left: 316px;
@@ -404,7 +406,7 @@ img {
 .modal-show {
   display: block;
   z-index: 1;
-  animation: bounce 0.6s;
+  animation: bounce 0.8s;
 }
 
 .modal-hide {
@@ -432,6 +434,7 @@ img {
   padding: 0px;
   border: none;
   box-shadow: 0px;
+  z-index: 2;
 }
 
 .show-modal-button:hover {
@@ -710,14 +713,16 @@ img {
 
 .main-filter-form {
   display: grid;
-  grid-template-columns: 227px 300px 527px;
+  grid-template-columns: 254px 300px 503px;
   margin-left: auto;
   padding-left: 70px;
   padding-right: 73px;
+  padding-top: 4px;
 }
 
 .main-filter fieldset {
   border: none;
+  padding: 0px;
   margin-top: 21px;
 }
 
@@ -761,15 +766,19 @@ img {
   text-transform: uppercase;
 }
 
+.checkbox-area {
+  padding-left: 0px;
+}
+
 .checkbox-area label {
   position: relative;
   display: block;
   cursor: pointer;
   user-select: none;
-  padding-left: 39px;
+  padding-left: 41px;
 }
 
-.filter-input-checkbox + label::before {
+.filter-input-checkbox+label::before {
   content: "";
   position: absolute;
   left: 0px;
@@ -777,22 +786,20 @@ img {
   background-image: url("../img/checkbox-off.svg");
   width: 23px;
   height: 23px;
-  /* border: 2px solid var(--basic-white);
-  border-radius: 2px; */
 }
 
-.filter-input-checkbox:checked + label::before {
+.filter-input-checkbox:checked+label::before {
   background-image: none;
 }
 
-.filter-input-checkbox:checked + label::after {
+.filter-input-checkbox:checked+label::after {
+  width: 27px;
+  height: 23px;
   content: "";
   position: absolute;
   left: 0px;
   top: 0px;
   background-image: url("../img/checkbox-on.svg");
-  width: 27px;
-  height: 23px;
 }
 
 .price-filter {
@@ -800,20 +807,50 @@ img {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  padding-left: 200px;
+  margin-left: 186px;
+  margin-right: 0px;
 }
 
 .price-filter legend {
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 11px;
+}
+
+.price-controls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 318px;
+  min-height: 37px;
+  position: relative;
+  border: 2px solid var(--basic-white);
+  border-radius: 2px;
+}
+
+.price-controls::after {
+  width: 2px;
+  height: 22px;
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 158px;
+  background-color: var(--basic-white);
+}
+
+.price-controls label:nth-child(1) {
+  padding-left: 65px;
+}
+
+.price-controls label:nth-child(3) {
+  padding-left: 48px;
 }
 
 .price-controls input {
-  width: 154px;
-  min-height: 34px;
+  width: 83px;
+  padding-left: 5px;
+  text-align: start;
+  border: none;
   outline: none;
-  border: 2px solid var(--basic-white);
-  border-radius: 2px;
 }
 
 .range-controls {
@@ -823,6 +860,7 @@ img {
 }
 
 .range-controls .scale {
+  width: 316px;
   height: 2px;
   background: var(--opacity-white);
 }
@@ -852,11 +890,12 @@ img {
 .range-controls .toggle:hover {
   width: 4px;
   height: 4px;
+  background-color: var(--range-toggle);
   border: 9px solid var(--basic-white);
 }
 
 .range-controls .toggle-max {
-  left: 238px;
+  left: 253px;
 }
 
 .price-filter input:nth-child(4) {
@@ -865,7 +904,7 @@ img {
 
 .price-filter button {
   width: 137px;
-  height: 34px;
+  height: 36px;
   margin: 0 auto;
   font-size: 14px;
   line-height: 21px;
@@ -890,6 +929,7 @@ img {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  min-height: 93px;
   margin-left: 73px;
   font-size: 12px;
   line-height: 18px;
@@ -901,12 +941,17 @@ img {
   line-height: 26px;
   font-weight: bold;
   padding-right: 46px;
-  padding-top: 34px;
+  padding-top: 16px;
   padding-bottom: 26px;
 }
 
 .sort-results label {
   margin-right: 40px;
+  padding-bottom: 14px;
+}
+
+.sort {
+  margin-bottom: 11px;
 }
 
 .sort .active {
@@ -915,7 +960,7 @@ img {
 }
 
 .sort a {
-  margin-right: 32px;
+  margin-right: 30px;
   color: var(--opacity-black);
   border-bottom: 1px dotted var(--basic-blue);
 }
@@ -933,7 +978,7 @@ img {
 
 .direction>.desc {
   position: absolute;
-  top: 45px;
+  top: 38px;
   right: 73px;
   width: 11px;
   height: 10px;
@@ -945,7 +990,7 @@ img {
 
 .direction>.asc {
   position: absolute;
-  top: 45px;
+  top: 38px;
   right: 96px;
   width: 11px;
   height: 10px;
@@ -986,9 +1031,15 @@ img {
   padding-left: 73px;
   padding-right: 73px;
   width: 100%;
+  min-height: 150px;
   border: 1px solid var(--basic-light-beige);
   border-left-style: none;
   border-right-style: none;
+  border-bottom-style: none;
+}
+
+.results:nth-child(3) {
+  border-bottom: 1px solid var(--basic-light-beige);
 }
 
 .catalog-item h3 {
@@ -996,8 +1047,7 @@ img {
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
-  margin-bottom: 7px;
-  padding: 0px;
+  margin-bottom: 0px;
 }
 
 .catalog-item li {
@@ -1027,8 +1077,8 @@ img {
 
 .catalog-item-details p {
   color: var(--basic-dark);
-  margin-top: -20px;
-  margin-bottom: 10px;
+  margin-top: -17px;
+  padding-bottom: 0px;
 }
 
 .catalog-item-details a {
@@ -1083,7 +1133,7 @@ img {
 .star {
   display: flex;
   flex-direction: row;
-  /* margin-top: 29px; */
+  padding-top: 0px;
 }
 
 .star li {
@@ -1091,7 +1141,7 @@ img {
   width: 19px;
   height: 17px;
   top: 29px;
-  right: 0px;
+  right: -8px;
   margin-right: 5px;
   background-image: url("../img/star.svg");
 }
@@ -1099,8 +1149,8 @@ img {
 .rating {
   width: 110px;
   height: 27px;
-  margin-top: 47px;
-  margin-bottom: 30px;
+  margin-top: 75px;
+  margin-bottom: 31px;
   text-align: center;
   line-height: 27px;
   vertical-align: middle;
@@ -1125,15 +1175,7 @@ img {
 
 @keyframes bounce {
   0% {
-    transform: translateY(-2000px);
-  }
-
-  70% {
-    transform: translateY(30px);
-  }
-
-  90% {
-    transform: translateY(-10px);
+    transform: translateY(-395px);
   }
 
   100% {
@@ -1142,6 +1184,7 @@ img {
 }
 
 @keyframes shake {
+
   0%,
   100% {
     transform: translateX(0);

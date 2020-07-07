@@ -33,7 +33,8 @@
             <legend>Инфраструктура:</legend>
             <ul>
               <li>
-                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="pool" id="filter-pool" checked>
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="pool" id="filter-pool"
+                  checked>
                 <label for="filter-pool">Бассейн</label>
               </li>
               <li>
@@ -51,37 +52,38 @@
             <legend>Тип жилья:</legend>
             <ul>
               <li>
-                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="hotel" id="search-result-hotel" checked>
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="hotel"
+                  id="search-result-hotel" checked>
                 <label for="search-result-hotel">Гостиница</label>
               </li>
               <li>
-                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="motel" id="search-result-motel" checked>
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="motel"
+                  id="search-result-motel" checked>
                 <label for="search-result-motel">Мотель</label>
               </li>
               <li>
-                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="apartament" id="search-result-apartament" checked>
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="apartament"
+                  id="search-result-apartament" checked>
                 <label for="search-result-apartament">Апартаменты</label>
               </li>
             </ul>
           </fieldset>
 
           <fieldset class="price-filter">
-            <legend>Стоимость в сутки(р):</legend>
+            <legend>Стоимость в сутки (р):</legend>
             <div class="range-filter">
               <div class="price-controls">
-                <label class="min-price">
-                  <input type="text" name="min-price" placeholder="От 0">
-                </label>
-                <label class="max-price">
-                  <input type="text" name="max-price" placeholder="До 3000">
-                </label>
+                <label class="min-price">От</label>
+                <input type="text" name="min-price" placeholder="0">
+                <label class="max-price">До</label>
+                <input type="text" name="max-price" placeholder="3000">
               </div>
               <div class="range-controls">
                 <div class="scale">
                   <div class="bar"></div>
                 </div>
-                <div class="toggle toggle-min" tabindex="0"></div>
-                <div class="toggle toggle-max" tabindex="0"></div>
+                <button class="toggle toggle-min"></button>
+                <button class="toggle toggle-max"></button>
               </div>
             </div>
             <button type="submit">Показать</button>
