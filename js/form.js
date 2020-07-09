@@ -7,7 +7,7 @@ var children = document.querySelector('#children');
 
 searchForm.classList.add('modal-hide');
 
-searchButton.addEventListener("click", function (evt) {
+searchButton.addEventListener('click', function (evt) {
   evt.preventDefault();
   if (searchForm.classList.contains('modal-show')) {
     searchForm.classList.remove('modal-show');
@@ -25,12 +25,12 @@ searchForm.addEventListener('submit', function (evt) {
   }
 });
 
-window.addEventListener("keydown", function (evt) {
+window.addEventListener('keydown', function (evt) {
   if (evt.keyCode === 27) {
-    if (searchForm.classList.contains("modal-show")) {
+    if (searchForm.classList.contains('modal-show')) {
       evt.preventDefault();
-      searchForm.classList.remove("modal-show");
-      searchForm.classList.remove("modal-error");
+      searchForm.classList.remove('modal-show');
+      searchForm.classList.remove('modal-error');
     }
   }
 });
