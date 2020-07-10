@@ -377,8 +377,8 @@ img {
 }
 
 .map-label p {
-  margin-top: 23px;
-  padding-bottom: 33px;
+  margin-top: 26px;
+  padding-bottom: 30px;
   color: var(--basic-dark);
 }
 
@@ -654,6 +654,7 @@ img {
   height: 48px;
   background-color: var(--basic-blue);
   position: relative;
+  margin-bottom: 6px;
 }
 
 .socials a:hover {
