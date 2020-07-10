@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>HTML Academy: Седона hotels</title>
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/normalize.min.css" rel="stylesheet">
   <link href="css/style.min.css" rel="stylesheet">
 </head>
 
@@ -62,9 +62,9 @@
                 <label for="search-result-motel">Мотель</label>
               </li>
               <li>
-                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="apartament"
-                  id="search-result-apartament" checked>
-                <label for="search-result-apartament">Апартаменты</label>
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="apartments"
+                  id="search-result-apartments" checked>
+                <label for="search-result-apartments">Апартаменты</label>
               </li>
             </ul>
           </fieldset>
@@ -73,10 +73,10 @@
             <legend>Стоимость в сутки (р):</legend>
             <div class="range-filter">
               <div class="price-controls">
-                <label class="min-price">От</label>
-                <input type="text" name="min-price" placeholder="0">
-                <label class="max-price">До</label>
-                <input type="text" name="max-price" placeholder="3000">
+                <label class="min-price" for="min-price-controls">От</label>
+                <input type="text" name="min-price" placeholder="0" id="min-price-controls">
+                <label class="max-price" for="max-price-controls">До</label>
+                <input type="text" name="max-price" placeholder="3000" id="min-price-controls">
               </div>
               <div class="range-controls">
                 <div class="scale">
